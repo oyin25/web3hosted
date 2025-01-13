@@ -1,31 +1,32 @@
-# web3-hosted
-**web3-hosted** is a simple and customizable bottom sheet dialog library for the web. It allows you to create stylish and highly customizable bottom sheets with optional close buttons, customizable dimensions, glass effects, and more.
+# web3hosted
+**web3hosted** is a simple and customizable bottom sheet dialog library for the web. It allows you to create stylish and highly customizable bottom sheets with optional close buttons, customizable dimensions, glass effects, and more.
 
 ## Current Version
 1.0.0
 
 ## Demo
-- [Docs available here](https://oyin25.github.io/web3-hosted/)
+- [Docs available here](https://oyin25.github.io/web3hosted/)
+- [Landing Page](https://www.jsdelivr.com/package/gh/oyin25/web3hosted)
 
 ## CDNs
-To include **web3-hosted** in your project using a CDN, add the following scripts:
+To include **web3hosted** in your project using a CDN, add the following scripts:
 
 ### CSS and JS via jsDelivr
-- [web3-hosted.css](https://cdn.jsdelivr.net/gh/oyin25/web3-hosted@latest/web3Hosted.css)
-- [web3-hosted.js](https://cdn.jsdelivr.net/gh/oyin25/web3-hosted@latest/web3Hosted.js)
+- [web3hosted.css](https://cdn.jsdelivr.net/gh/oyin25/web3hosted@latest/web3Hosted.css)
+- [web3hosted.js](https://cdn.jsdelivr.net/gh/oyin25/web3hosted@latest/web3Hosted.js)
 
 ## Installation
 
 ### npm
 To install via npm, use the following command:
 ```bash
-npm install web3-hosted
+npm install web3hosted
 ```
 
 ### yarn
 To install via yarn, use the following command:
 ```bash
-yarn add web3-hosted
+yarn add web3hosted
 ```
 
 ## Features
@@ -55,7 +56,7 @@ yarn add web3-hosted
 
   // Listen for the result from the custom button
   connectButton.addEventListener("web3Result", (event) => {
-    console.log("Result from web3-hosted:", event.detail);
+    console.log("Result from web3hosted:", event.detail);
     alert(`Wallet Connected: ${event.detail.walletName}`);
   });
 </script>
@@ -63,12 +64,12 @@ yarn add web3-hosted
 
 #### Step 1: Include the CSS and JS files
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oyin25/web3-hosted@latest/web3Hosted.css">
-<script src="https://cdn.jsdelivr.net/gh/oyin25/web3-hosted@latest/web3Hosted.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oyin25/web3hosted@latest/web3Hosted.css">
+<script src="https://cdn.jsdelivr.net/gh/oyin25/web3hosted@latest/web3Hosted.js"></script>
 ```
 
 #### Step 2: Create a Bottom Sheet
-To create and display a bottom sheet dialog using **web3-hosted**, use the following example:
+To create and display a bottom sheet dialog using **web3hosted**, use the following example:
 ```javascript
 web3Hosted.hosted({
   layout: "grid",
@@ -198,7 +199,7 @@ To contribute or modify this library, ensure you have the following setup:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/oyin25/web3-hosted-lib.git
+git clone https://github.com/oyin25/web3hosted-lib.git
 ```
 
 2. Install dependencies:
