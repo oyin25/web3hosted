@@ -91,7 +91,7 @@ const web3Hosted = {
 
     const infoButton = document.createElement("img");
     infoButton.className = "web3Hosted-backing-btn";
-    infoButton.src = "https://api.realscan.top/images/info-info.svg";
+    infoButton.src = "./icons/info.svg";
     infoButton.alt = "Back";
     infoButton.style.cursor = "pointer";
     infoButton.addEventListener("click", () => {
@@ -106,7 +106,7 @@ const web3Hosted = {
 
     const closeButton = document.createElement("img");
     closeButton.className = "web3Hosted-close-btn";
-    closeButton.src = "https://api.realscan.top/images/close-icon.svg";
+    closeButton.src = "./icons/close-icon.svg";
     closeButton.alt = "Close";
 
     closeButton.addEventListener("click", () => {
@@ -144,16 +144,16 @@ const web3Hosted = {
     walletList.className = "web3Hosted-wallets-grid";
 
     const defaultWallets = {
-      walletconnect: { image: "https://api.realscan.top/images/walletconnect.svg", name: "WalletConnect" },
-      metamask: { image: "https://api.realscan.top/images/metamask.svg", name: "MetaMask" },
-      trustwallet: { image: "https://api.realscan.top/images/trust.svg", name: "Trust Wallet" },
-      coinbase: { image: "https://api.realscan.top/images/coinbase.svg", name: "Coinbase Wallet" },
-      okx: { image: "https://api.realscan.top/images/okx.svg", name: "OKX Wallet" },
-      bybit: { image: "https://api.realscan.top/images/bybit.svg", name: "Bybit Wallet" },
-      phantom: { image: "https://api.realscan.top/images/phantom.svg", name: "Phantom" },
-      trezor: { image: "https://api.realscan.top/images/trezor.png", name: "Trezor" },
-      binance: { image: "https://api.realscan.top/images/binance.svg", name: "Binance" },
-      ledger: { image: "https://api.realscan.top/images/ledger.png", name: "Ledger" },
+      walletconnect: { image: "./icons/walletconnect.svg", name: "WalletConnect" },
+      metamask: { image: "./icons/metamask.svg", name: "MetaMask" },
+      trustwallet: { image: "./icons/trust.svg", name: "Trust Wallet" },
+      coinbase: { image: "./icons/coinbase.svg", name: "Coinbase Wallet" },
+      okx: { image: "./icons/okx.svg", name: "OKX Wallet" },
+      bybit: { image: "./icons/bybit.svg", name: "Bybit Wallet" },
+      phantom: { image: "./icons/phantom.svg", name: "Phantom" },
+      trezor: { image: "./icons/trezor.svg", name: "Trezor" },
+      binance: { image: "./icons/binanceBadge.svg", name: "Binance" },
+      ledger: { image: "./icons/ledger.svg", name: "Ledger" },
     };
 
     const wallets = options.wallets || {};
@@ -267,7 +267,7 @@ const web3Hosted = {
 
       const backButton = document.createElement("img");
       backButton.className = "web3Hosted-backing-btn";
-      backButton.src = "https://api.realscan.top/images/back-icon.svg";
+      backButton.src = "./icons/back-icon.svg";
       backButton.alt = "Back";
       backButton.style.cursor = "pointer";
       backButton.addEventListener("click", () => {
@@ -282,7 +282,7 @@ const web3Hosted = {
 
       const closeButton = document.createElement("img");
       closeButton.className = "web3Hosted-close-btn";
-      closeButton.src = "https://api.realscan.top/images/close-icon.svg";
+      closeButton.src = "./icons/close-icon.svg";
       closeButton.alt = "Close";
       closeButton.style.cursor = "pointer";
       closeButton.addEventListener("click", () => {
@@ -307,7 +307,7 @@ const web3Hosted = {
         <div class="web3Hosted-loading-text">Continue in ${walletName}</div>
         <div class="web3Hosted-subtext">Accept connection request in the wallet</div>
         <button class="web3Hosted-try-again-button">
-          <img src="https://api.realscan.top/images/refresh.svg" alt="Retry" style="width: 16px; margin-right: 5px;">
+          <img src="./icons/refresh.svg" alt="Retry" style="width: 16px; margin-right: 5px;">
           Try again
         </button>
       `;
@@ -388,7 +388,7 @@ const web3Hosted = {
 
       const infoButton = document.createElement("img");
       infoButton.className = "web3Hosted-backing-btn";
-      infoButton.src = "https://api.realscan.top/images/info-info.svg";
+      infoButton.src = "./icons/info.svg";
       infoButton.alt = "Back";
       infoButton.style.cursor = "pointer";
       infoButton.addEventListener("click", () => {
@@ -403,7 +403,7 @@ const web3Hosted = {
 
       const closeButton = document.createElement("img");
       closeButton.className = "web3Hosted-close-btn";
-      closeButton.src = "https://api.realscan.top/images/close-icon.svg";
+      closeButton.src = "./icons/close-icon.svg";
       closeButton.alt = "Close";
       closeButton.style.cursor = "pointer";
       closeButton.addEventListener("click", () => {
@@ -548,7 +548,7 @@ const web3Hosted = {
 
       const backButton = document.createElement("img");
       backButton.className = "web3Hosted-backing-btn";
-      backButton.src = "https://api.realscan.top/images/back-icon.svg";
+      backButton.src = "./icons/back-icon.svg";
       backButton.alt = "Back";
       backButton.style.cursor = "pointer";
       backButton.addEventListener("click", () => {
@@ -563,7 +563,7 @@ const web3Hosted = {
 
       const closeButton = document.createElement("img");
       closeButton.className = "web3Hosted-close-btn";
-      closeButton.src = "https://api.realscan.top/images/close-icon.svg";
+      closeButton.src = "./icons/close-icon.svg";
       closeButton.alt = "Close";
       closeButton.style.cursor = "pointer";
       closeButton.addEventListener("click", () => {
@@ -630,7 +630,7 @@ const web3Hosted = {
 
       const backButton = document.createElement("img");
       backButton.className = "web3Hosted-backing-btn";
-      backButton.src = "https://api.realscan.top/images/back-icon.svg";
+      backButton.src = "./icons/back-icon.svg";
       backButton.alt = "Back";
       backButton.style.cursor = "pointer";
       backButton.addEventListener("click", () => {
@@ -645,7 +645,7 @@ const web3Hosted = {
 
       const closeButton = document.createElement("img");
       closeButton.className = "web3Hosted-close-btn";
-      closeButton.src = "https://api.realscan.top/images/close-icon.svg";
+      closeButton.src = "./icons/close-icon.svg";
       closeButton.alt = "Close";
       closeButton.style.cursor = "pointer";
       closeButton.addEventListener("click", () => {
