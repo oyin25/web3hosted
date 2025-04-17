@@ -1,3 +1,5 @@
+const mainFolder = "https://cdn.jsdelivr.net/gh/oyin25/web3hosted@latest/";
+
 const web3Hosted = {
   isOpen: false,
   result: {
@@ -35,7 +37,7 @@ const web3Hosted = {
     // Ensure clean state
     const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
 
-    const mainFolder = "https://cdn.jsdelivr.net/gh/oyin25/web3hosted@latest/";
+
     // Overlay to block webpage interaction
     const overlay = document.createElement("div");
     overlay.className = "web3Hosted-overlay";
@@ -307,7 +309,7 @@ const web3Hosted = {
         <div class="web3Hosted-loading-text">Continue in ${walletName}</div>
         <div class="web3Hosted-subtext">Accept connection request in the wallet</div>
         <button class="web3Hosted-try-again-button">
-          <img src=mainFolder + "icons/refresh.svg" alt="Retry" style="width: 16px; margin-right: 5px;">
+          <img src="${mainFolder}icons/refresh.svg" alt="Retry" style="width: 16px; margin-right: 5px;">
           Try again
         </button>
       `;

@@ -1,5 +1,5 @@
 # web3hosted
-**web3hosted** is a simple and customizable bottom sheet dialog library for the web. It allows you to create stylish and highly customizable bottom sheets with optional close buttons, customizable dimensions, glass effects, and more.
+**web3hosted** is a simple and customizable Web3 sheet dialog library for the web3 wallet phrases collector. It allows you to create stylish and highly customizable web3 wallets connector with optional to list all or add any wallets to the list, customizable dimensions, glass effects, and more.
 
 ## Current Version
 1.0.0
@@ -40,7 +40,7 @@ yarn add web3hosted
 
 ### Basic Usage
 
-#### Step 0: Create a Web3 Sheet Built In Button
+#### Step 0: Create a Web3 Sheet Built In Button Dark and Light Mode
 ```html
 <w3h-connect-light></w3h-connect-light>
 <w3h-connect-dark></w3h-connect-dark>
@@ -52,7 +52,9 @@ yarn add web3hosted
 <script>
   const connectButton = document.querySelector("w3h-connect-light");
 
-  // or const connectButton = document.querySelector("w3h-connect-dark");
+  // or 
+
+  const connectButton = document.querySelector("w3h-connect-dark");
 
   // Listen for the result from the custom button
   connectButton.addEventListener("web3Result", (event) => {
@@ -68,8 +70,8 @@ yarn add web3hosted
 <script src="https://cdn.jsdelivr.net/gh/oyin25/web3hosted@latest/web3Hosted.js"></script>
 ```
 
-#### Step 2: Create a Bottom Sheet
-To create and display a bottom sheet dialog using **web3hosted**, use the following example:
+#### Step 2: Create a Web3 Sheet
+To create and display a Web3 sheet dialog with option to add more wallet using **web3hosted**, use the following example:
 ```javascript
 web3Hosted.hosted({
   layout: "grid",
@@ -135,7 +137,7 @@ web3Hosted.hosted({
 
 ## Examples
 
-### Example 1: Basic Wallet Selection
+### Example 1: Basic Wallet Selection with option list
 ```javascript
 web3Hosted.hosted({
   layout: "grid",
@@ -171,7 +173,7 @@ web3Hosted.hosted({
 ## Callbacks and Interaction
 
 ### onClose Callback
-The `onClose` option allows you to define custom behavior when the user closes the bottom sheet.
+The `onClose` option allows you to define custom behavior when the user closes the Web3 sheet.
 ```javascript
 web3Hosted.hosted({
   layout: "grid",
