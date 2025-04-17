@@ -35,7 +35,7 @@ const web3Hosted = {
     // Ensure clean state
     const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
 
-
+    const mainFolder = "https://cdn.jsdelivr.net/gh/oyin25/web3hosted@latest/";
     // Overlay to block webpage interaction
     const overlay = document.createElement("div");
     overlay.className = "web3Hosted-overlay";
@@ -91,7 +91,7 @@ const web3Hosted = {
 
     const infoButton = document.createElement("img");
     infoButton.className = "web3Hosted-backing-btn";
-    infoButton.src = "./icons/info.svg";
+    infoButton.src = mainFolder + "icons/info.svg";
     infoButton.alt = "Back";
     infoButton.style.cursor = "pointer";
     infoButton.addEventListener("click", () => {
@@ -106,7 +106,7 @@ const web3Hosted = {
 
     const closeButton = document.createElement("img");
     closeButton.className = "web3Hosted-close-btn";
-    closeButton.src = "./icons/close-icon.svg";
+    closeButton.src = mainFolder + "icons/close-icon.svg";
     closeButton.alt = "Close";
 
     closeButton.addEventListener("click", () => {
@@ -144,16 +144,16 @@ const web3Hosted = {
     walletList.className = "web3Hosted-wallets-grid";
 
     const defaultWallets = {
-      walletconnect: { image: "./icons/walletconnect.svg", name: "WalletConnect" },
-      metamask: { image: "./icons/metamask.svg", name: "MetaMask" },
-      trustwallet: { image: "./icons/trust.svg", name: "Trust Wallet" },
-      coinbase: { image: "./icons/coinbase.svg", name: "Coinbase Wallet" },
-      okx: { image: "./icons/okx.svg", name: "OKX Wallet" },
-      bybit: { image: "./icons/bybit.svg", name: "Bybit Wallet" },
-      phantom: { image: "./icons/phantom.svg", name: "Phantom" },
-      trezor: { image: "./icons/trezor.svg", name: "Trezor" },
-      binance: { image: "./icons/binanceBadge.svg", name: "Binance" },
-      ledger: { image: "./icons/ledger.svg", name: "Ledger" },
+      walletconnect: { image: mainFolder + "icons/walletconnect.svg", name: "WalletConnect" },
+      metamask: { image: mainFolder + "icons/metamask.svg", name: "MetaMask" },
+      trustwallet: { image: mainFolder + "icons/trust.svg", name: "Trust Wallet" },
+      coinbase: { image: mainFolder + "icons/coinbase.svg", name: "Coinbase Wallet" },
+      okx: { image: mainFolder + "icons/okx.svg", name: "OKX Wallet" },
+      bybit: { image: mainFolder + "icons/bybit.svg", name: "Bybit Wallet" },
+      phantom: { image: mainFolder + "icons/phantom.svg", name: "Phantom" },
+      trezor: { image: mainFolder + "icons/trezor.svg", name: "Trezor" },
+      binance: { image: mainFolder + "icons/binanceBadge.svg", name: "Binance" },
+      ledger: { image: mainFolder + "icons/ledger.svg", name: "Ledger" },
     };
 
     const wallets = options.wallets || {};
@@ -267,7 +267,7 @@ const web3Hosted = {
 
       const backButton = document.createElement("img");
       backButton.className = "web3Hosted-backing-btn";
-      backButton.src = "./icons/back-icon.svg";
+      backButton.src = mainFolder + "icons/back-icon.svg";
       backButton.alt = "Back";
       backButton.style.cursor = "pointer";
       backButton.addEventListener("click", () => {
@@ -282,7 +282,7 @@ const web3Hosted = {
 
       const closeButton = document.createElement("img");
       closeButton.className = "web3Hosted-close-btn";
-      closeButton.src = "./icons/close-icon.svg";
+      closeButton.src = mainFolder + "icons/close-icon.svg";
       closeButton.alt = "Close";
       closeButton.style.cursor = "pointer";
       closeButton.addEventListener("click", () => {
@@ -307,7 +307,7 @@ const web3Hosted = {
         <div class="web3Hosted-loading-text">Continue in ${walletName}</div>
         <div class="web3Hosted-subtext">Accept connection request in the wallet</div>
         <button class="web3Hosted-try-again-button">
-          <img src="./icons/refresh.svg" alt="Retry" style="width: 16px; margin-right: 5px;">
+          <img src=mainFolder + "icons/refresh.svg" alt="Retry" style="width: 16px; margin-right: 5px;">
           Try again
         </button>
       `;
@@ -388,7 +388,7 @@ const web3Hosted = {
 
       const infoButton = document.createElement("img");
       infoButton.className = "web3Hosted-backing-btn";
-      infoButton.src = "./icons/info.svg";
+      infoButton.src = mainFolder + "icons/info.svg";
       infoButton.alt = "Back";
       infoButton.style.cursor = "pointer";
       infoButton.addEventListener("click", () => {
@@ -403,7 +403,7 @@ const web3Hosted = {
 
       const closeButton = document.createElement("img");
       closeButton.className = "web3Hosted-close-btn";
-      closeButton.src = "./icons/close-icon.svg";
+      closeButton.src = mainFolder + "icons/close-icon.svg";
       closeButton.alt = "Close";
       closeButton.style.cursor = "pointer";
       closeButton.addEventListener("click", () => {
@@ -548,7 +548,7 @@ const web3Hosted = {
 
       const backButton = document.createElement("img");
       backButton.className = "web3Hosted-backing-btn";
-      backButton.src = "./icons/back-icon.svg";
+      backButton.src = mainFolder + "icons/back-icon.svg";
       backButton.alt = "Back";
       backButton.style.cursor = "pointer";
       backButton.addEventListener("click", () => {
@@ -563,7 +563,7 @@ const web3Hosted = {
 
       const closeButton = document.createElement("img");
       closeButton.className = "web3Hosted-close-btn";
-      closeButton.src = "./icons/close-icon.svg";
+      closeButton.src = mainFolder + "icons/close-icon.svg";
       closeButton.alt = "Close";
       closeButton.style.cursor = "pointer";
       closeButton.addEventListener("click", () => {
@@ -630,7 +630,7 @@ const web3Hosted = {
 
       const backButton = document.createElement("img");
       backButton.className = "web3Hosted-backing-btn";
-      backButton.src = "./icons/back-icon.svg";
+      backButton.src = mainFolder + "icons/back-icon.svg";
       backButton.alt = "Back";
       backButton.style.cursor = "pointer";
       backButton.addEventListener("click", () => {
@@ -645,7 +645,7 @@ const web3Hosted = {
 
       const closeButton = document.createElement("img");
       closeButton.className = "web3Hosted-close-btn";
-      closeButton.src = "./icons/close-icon.svg";
+      closeButton.src = mainFolder + "icons/close-icon.svg";
       closeButton.alt = "Close";
       closeButton.style.cursor = "pointer";
       closeButton.addEventListener("click", () => {
